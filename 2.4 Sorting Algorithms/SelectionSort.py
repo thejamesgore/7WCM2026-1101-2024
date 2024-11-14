@@ -97,7 +97,20 @@ def selection_sort_numbers(list_of_numbers):
     print("Here they are sorted :",list_of_numbers)
     
 
-
+def selection_sort_alphabetical(cities):
+    
+    i = 0
+    j = i + 1
+    
+    while i < len(cities):
+        
+        while j < len(cities):
+            
+            left = cities[i]
+            right = cities[j]
+            
+            print("The letter is", left[0])
+    
 
 
 selection_sort_numbers(random_list)
