@@ -67,21 +67,31 @@ def selection_sort_numbers(list_of_numbers):
     print("The random list of numbers we're going to sort are: ", random_list)
     print("")
 
-    
+    # we initialise the variables that will help us track the numbers we're looping through
     i = 0
     j = i + 1
     
+    # this first while loop traverses the entire list
     while i < len(list_of_numbers):
         
+        # this second while loop traverses all numbers to the right of index i
         while j < len(list_of_numbers):
 
+            # we do our comparison and check to see if the number to the right of index i is less than the number at index i
             if list_of_numbers[j] < list_of_numbers[i]:
+                
+                # we create a temp variable to store the first value then switch swap the values 
                 temp_number = list_of_numbers[j]
                 list_of_numbers[j] = list_of_numbers[i]
                 list_of_numbers[i] = temp_number  
+            
+            # we now increment j so we compare the next number and repeat the loop    
             j = j + 1
         
+        # now we have done the inner loop we can move to the number at the next position and compare it to all the other numbers
         i = i + 1
+        
+        # we have to reset j to be on the right of the number we shall be comparing to all other numbers
         j = i + 1
     
     print("Here they are sorted :",list_of_numbers)
