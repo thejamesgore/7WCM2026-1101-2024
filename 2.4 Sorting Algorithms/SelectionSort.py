@@ -19,7 +19,7 @@ def selection_sort_by_length(list):
     i = 0
     j = 0
     number_of_cities = len(list)  # len() of a list gives you the number of elements in it
-                                    # len() of a string will give you the lenght of it
+                                    # len() of a string will give you the length of it
     n = number_of_cities
 
 
@@ -96,8 +96,12 @@ def selection_sort_numbers(list_of_numbers):
     
     print("Here they are sorted :",list_of_numbers)
     
+selection_sort_numbers(random_list)
 
 def selection_sort_alphabetical(cities):
+    print("  ")
+    print("  ")
+    print("Lets sort alphabetically")
     
     i = 0
     j = i + 1
@@ -109,8 +113,18 @@ def selection_sort_alphabetical(cities):
             left = cities[i]
             right = cities[j]
             
-            print("The letter is", left[0])
+            if right[0] < left[0]:
+                temp_city = cities[i]
+                cities[i] = cities[j]
+                cities[j] = temp_city
+            
+            j = j + 1
+            
+        i = i + 1
+        j = i + 1
+        
+    print("Here are the cities sorted in alphabetical order", cities)
     
+cities = ["London", "Canterbury", "York", "Leicester", "Antwerp"]
 
-
-selection_sort_numbers(random_list)
+selection_sort_alphabetical(cities)
