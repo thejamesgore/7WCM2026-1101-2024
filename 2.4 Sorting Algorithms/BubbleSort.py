@@ -5,11 +5,11 @@
 cities = ["London", "Canterbury", "York", "Leicester", "Antwerp"]
 
 
-def bubble_sort(list):
+def bubble_sort_by_length(list):
     print("Lets do the bubble sort algorithm!!")
     print("   ")
     print("   ")
-    print("We're going to sorting the following: ", list)
+    print("We're going to sort the following: ", list)
     
     i = 0
     has_swapped = True
@@ -17,8 +17,45 @@ def bubble_sort(list):
     while has_swapped == True:
         has_swapped = False
         for i in range(len(list) -1):
-            if list[i] > list[i + 1]:
+            print("DO WE NEED TO SWAP ??", list[i], list[i + 1])
+            if len(list[i]) > len(list[i + 1]):
+                list[i], list[i + 1] = list[i + 1], list[i]
+                print("YES, WE JUST DID A SWAP !!", list[i], list[i + 1])
+                has_swapped = True
+                print(" Our new list order is --->", list)
+            else:
+                print("NO WE DID NOT NEED TO SWAP ...", list[i], list[i + 1])
+                print(" Our new list order is --->", list)
+            i = i + 1
+        i = 0
+        
+    print("The newly sorted list is: ", list)
+
+bubble_sort_by_length(cities)
+
+
+def bubble_sort_alphabetical(list):
+    print("Lets sort alphabetically then!")
+    print("   ")
+    print("   ")
+    print("We're going to sort the following: ", list)
+    
+    i = 0
+    has_swapped = True
+    
+    while has_swapped == True:
+        has_swapped = False
+        
+        for i in range(len(list) -1):
+            left = list[i]
+            right = list[i + 1]
+            
+            if left[-1] < right[-1]:
                 list[i], list[i + 1] = list[i + 1], list[i]
                 has_swapped = True
         i = 0
         
+    print("The newly sorted list in alphabetical order is :", list)
+            
+            
+# bubble_sort_alphabetical(cities)
