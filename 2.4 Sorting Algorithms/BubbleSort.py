@@ -17,15 +17,15 @@ def bubble_sort_by_length(list):
     while has_swapped == True:
         has_swapped = False
         for i in range(len(list) -1):
-            print("DO WE NEED TO SWAP ??", list[i], list[i + 1])
+            # print("DO WE NEED TO SWAP ??", list[i], list[i + 1])
             if len(list[i]) > len(list[i + 1]):
                 list[i], list[i + 1] = list[i + 1], list[i]
-                print("YES, WE JUST DID A SWAP !!", list[i], list[i + 1])
+                # print("YES, WE JUST DID A SWAP !!", list[i], list[i + 1])
                 has_swapped = True
-                print(" Our new list order is --->", list)
+                # print(" Our new list order is --->", list)
             else:
-                print("NO WE DID NOT NEED TO SWAP ...", list[i], list[i + 1])
-                print(" Our new list order is --->", list)
+                # print("NO WE DID NOT NEED TO SWAP ...", list[i], list[i + 1])
+                # print(" Our new list order is --->", list)
             i = i + 1
         i = 0
         
@@ -50,7 +50,7 @@ def bubble_sort_alphabetical(list):
             left = list[i]
             right = list[i + 1]
             
-            if left[-1] < right[-1]:
+            if len(left[-1]) < len(right[-1]):
                 list[i], list[i + 1] = list[i + 1], list[i]
                 has_swapped = True
         i = 0
@@ -58,4 +58,4 @@ def bubble_sort_alphabetical(list):
     print("The newly sorted list in alphabetical order is :", list)
             
             
-# bubble_sort_alphabetical(cities)
+bubble_sort_alphabetical(cities)
