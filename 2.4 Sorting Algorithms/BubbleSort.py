@@ -34,7 +34,7 @@ def bubble_sort_by_length(list):
         
     print("The newly sorted list is: ", list)
 
-# bubble_sort_by_length(cities)
+bubble_sort_by_length(cities)
 
 random_list = [random.randint(1, 100) for _ in range(10)] 
 
@@ -89,4 +89,4 @@ def bubble_sort_alphabetical(list):
     print("The newly sorted list in alphabetical order is :", list)
             
             
-# bubble_sort_alphabetical(cities)
+bubble_sort_alphabetical(cities)
