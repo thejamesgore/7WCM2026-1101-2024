@@ -5,3 +5,8 @@
 # A * A^T
 # A^T * A
 
+import numpy as np
+
+matrix_a = np.random.randint(-10,10,(3,6))
+
+print("The Matrix is", matrix_a)
