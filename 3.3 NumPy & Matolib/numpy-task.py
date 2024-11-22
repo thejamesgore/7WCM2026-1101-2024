@@ -9,4 +9,7 @@ import numpy as np
 
 matrix_a = np.random.randint(-10,10,(3,6))
 
+matrix_t = np.transpose(matrix_a)
+
 print("The Matrix is", matrix_a)
+print("The Matrix transposed is", matrix_t)
